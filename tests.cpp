@@ -10,6 +10,7 @@ protected:
     Bowling game;
 
     void SetUp() override {}
+
     void TearDown() override {}
 
     void rollMultipleTimes(int n, int points) {

@@ -10,16 +10,21 @@ private:
     int scores[21];
     int n;
 public:
-    Bowling ();
+    Bowling();
+
     void roll(int points);
+
     int score();
+
     int frameScore(int frameIndex);
+
     bool isSpare(int frameIndex);
+
     bool isStrike(int frameIndex);
+
     int strikeBonus(int frameIndex);
+
     int spareBonus(int frameIndex);
-
-
 };
 
 #endif //BOWLING_BOWLING_H
