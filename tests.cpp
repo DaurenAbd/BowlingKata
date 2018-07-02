@@ -13,9 +13,9 @@ protected:
 
     void TearDown() override {}
 
-    void rollMultipleTimes(int n, int points) {
+    void rollMultipleTimes(int n, int pins) {
         for (int i = 0; i < n; ++i) {
-            game.roll(points);
+            game.roll(pins);
         }
     }
 

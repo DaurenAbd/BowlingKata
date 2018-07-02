@@ -7,12 +7,12 @@
 
 class Bowling {
 private:
-    int scores[21];
-    int n;
+    int rolls[21];
+    int currentRoll;
 public:
     Bowling();
 
-    void roll(int points);
+    void roll(int pins);
 
     int score();
 

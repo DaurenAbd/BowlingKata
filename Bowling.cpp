@@ -5,11 +5,11 @@
 #include "Bowling.h"
 
 Bowling::Bowling() {
-    n = 0;
+    currentRoll = 0;
 }
 
-void Bowling::roll(int points) {
-    scores[n++] = points;
+void Bowling::roll(int pins) {
+    rolls[currentRoll++] = pins;
 }
 
 int Bowling::score() {
@@ -33,23 +33,23 @@ int Bowling::score() {
 }
 
 int Bowling::frameScore(int frameIndex) {
-    return scores[frameIndex] + scores[frameIndex + 1];
+    return rolls[frameIndex] + rolls[frameIndex + 1];
 }
 
 bool Bowling::isSpare(int frameIndex) {
     return frameScore(frameIndex) == 10 &&
-           scores[frameIndex] > 0 &&
-           scores[frameIndex + 1] > 0;
+           rolls[frameIndex] > 0 &&
+           rolls[frameIndex + 1] > 0;
 }
 
 bool Bowling::isStrike(int frameIndex) {
-    return scores[frameIndex] == 10;
+    return rolls[frameIndex] == 10;
 }
 
 int Bowling::strikeBonus(int frameIndex) {
-    return scores[frameIndex + 1] + scores[frameIndex + 2];
+    return rolls[frameIndex + 1] + rolls[frameIndex + 2];
 }
 
 int Bowling::spareBonus(int frameIndex) {
-    return scores[frameIndex + 2];
+    return rolls[frameIndex + 2];
 }
